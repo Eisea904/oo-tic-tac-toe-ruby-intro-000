@@ -58,8 +58,8 @@ class TicTacToe
     user_input = gets.chomp
     index = input_to_index(user_input)
     if valid_move?(index)
-      token = current_player
-      move(index, token)
+      player_token = current_player
+      move(index, player_token)
       @board.display_board
     else
       turn
@@ -124,7 +124,7 @@ class TicTacToe
     end
 
     if won?
-      puts "Congratulation #{winner}"
+      puts "Congratulation #{winner}!"
     else draw?
       puts "Cats Game!"
     end
