@@ -60,7 +60,7 @@ class TicTacToe
     if valid_move?(index)
       player_token = current_player
       move(index, player_token)
-      @board.display_board
+      display_board
     else
       turn
     end
