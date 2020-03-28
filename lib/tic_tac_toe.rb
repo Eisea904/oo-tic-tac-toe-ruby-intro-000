@@ -35,22 +35,22 @@ class TicTacToe
 
   def turn_count
     turns = 0
-    @board.each { |index|
+    @board.each do |index|
       if index == "X" || index == "O"
         turns += 1
       end
-    }
+    end
     return turn
   end
 
   def current_player
     num_turns = turn_count
     if num_turns % 2 == 0
-      current_player = "X"
+      player = "X"
     else
-      current_player = "O"
+      player = "O"
     end
-    return current_player
+    return player
   end
 
   def turn
@@ -120,7 +120,7 @@ class TicTacToe
 
   def play
     until over? == true
-      turn(@board)
+      turn
     end
 
     if won?
