@@ -37,7 +37,7 @@ class TicTacToe
     turn = 0
     @board.each { |index|
       if index == "X" || index == "O"
-        turns += 1
+        turn += 1
       end
     }
     return turn
@@ -126,7 +126,7 @@ class TicTacToe
     if won?
       puts "Congratulations #{winner}!"
     else draw?
-      puts "Cats Game!"
+      puts "Cat's Game!"
     end
   end
 
