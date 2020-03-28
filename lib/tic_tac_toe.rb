@@ -50,7 +50,7 @@ class TicTacToe
     else
       current_player = "O"
     end
-    return player
+    return current_player
   end
 
   def turn
